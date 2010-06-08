@@ -14,7 +14,7 @@ use Math::Trig qw(asin rad2deg pi);
 require Exporter;
 our @ISA = qw(Exporter);
 
-our $VERSION = '0.90';
+our $VERSION = '0.91';
 
 our @EXPORT_OK = qw();
 our @EXPORT = qw();
@@ -731,9 +731,9 @@ This module implements several of the functions defined in the GE Aviation Syste
 
 This document is dated 08 October 2008 and must be acquired from GE Aviation Systems directly.
 
-GE Aviation Systems LLC
-3290 Patterson Avenue, SE, 
-Grand Rapids, MI 49512-1991, USA
+ GE Aviation Systems LLC
+ 3290 Patterson Avenue, SE, 
+ Grand Rapids, MI 49512-1991, USA
 
 This Perl Module provides functions which are identified using the numerical Command ID's found in the 
 reference document. 
@@ -773,13 +773,13 @@ modes shown below
 
 	$ge_obj->set_5D($mode)
 	
-Where $modes one of the following
+Where $modes is one of the following:
    
-3 Gyrocompass Mode (GC) 
-6 Navigation Mode (NAV)
-8 In-Vehicle Calibration Mode (IVC)
-9 Base Motion Compensated Coarse Align Mode (BMCCOARSE)
-12 Fast Base Motion Compensated Coarse Align Mode (FASTBMCCOARSE)
+ 3 Gyrocompass Mode (GC) 
+ 6 Navigation Mode (NAV)
+ 8 In-Vehicle Calibration Mode (IVC)
+ 9 Base Motion Compensated Coarse Align Mode (BMCCOARSE)
+ 12 Fast Base Motion Compensated Coarse Align Mode (FASTBMCCOARSE)
 
 Mode 3 or gyrocompass is the most common arguement here and this will send the IRU
 off into a gyrocompass excursion taking about 3 minutes to complete. The IRU must be
@@ -795,12 +795,12 @@ is just wrong and requires a power cycle to fix. I recommend get_62 only attitud
   
 Contents of returned hash reference are in degrees
   
-$ref->{'lat'}      = Latitude 
-$ref->{'lng'}      = Longitude 
-$ref->{'hdg_grid'} = Grid Heading 
-$ref->{'hdg_true'} = True Heading  
-$ref->{'pitch'}    = Pitch 
-$ref->{'roll'}     = Roll
+ $ref->{'lat'}      = Latitude 
+ $ref->{'lng'}      = Longitude 
+ $ref->{'hdg_grid'} = Grid Heading 
+ $ref->{'hdg_true'} = True Heading  
+ $ref->{'pitch'}    = Pitch 
+ $ref->{'roll'}     = Roll
 
 
 =head2 get_62
@@ -811,10 +811,10 @@ Get the Heading and Attitude and return in a hash reference
   
 Contents of returned hash reference are in degrees
  
-$ref->{'hdg_grid'} = Grid Heading  
-$ref->{'hdg_true'} = True Heading 
-$ref->{'pitch'}    = Pitch
-$ref->{'roll'}     = Roll 
+ $ref->{'hdg_grid'} = Grid Heading  
+ $ref->{'hdg_true'} = True Heading 
+ $ref->{'pitch'}    = Pitch
+ $ref->{'roll'}     = Roll 
 
 =head2 get_0F
 
@@ -824,11 +824,11 @@ Get residual heading and gyrocompass time remaining.
   
 Contents of returned hash reference
  
-$ref->{'gc_time'} = time remain for gyrocompass to complete 
-$ref->{'gc_mode_num'}  = Numerical gyro mode 
-$ref->{'gc_mode_str'}  = Gyro mode string 
-$ref->{'residual'}     = heading residual 
-$ref->{'move_stat'}    = Moving status 0 for static, 1 for movement in the last 10 sec
+ $ref->{'gc_time'} = time remain for gyrocompass to complete 
+ $ref->{'gc_mode_num'}  = Numerical gyro mode 
+ $ref->{'gc_mode_str'}  = Gyro mode string 
+ $ref->{'residual'}     = heading residual 
+ $ref->{'move_stat'}    = Moving status 0 for static, 1 for movement in the last 10 sec
 
 =head2 plug_test
 
@@ -845,12 +845,12 @@ Used to test the serial connection with a loopback plug.
 
 =head1 SEE ALSO
 
-PERFORMANCE SPECIFICATION FOR THE LAND NAVIGATION SYSTEM AND NORTH FINDING MODULE, 
+B<PERFORMANCE SPECIFICATION FOR THE LAND NAVIGATION SYSTEM AND NORTH FINDING MODULE>, 
 Document Number YV1657,
 Rev. B
 15 March 2001
 
-RS-422 Interface Protocol Specification for the Operational Vehicle Program of the Inertial Reference Unit, 
+B<RS-422 Interface Protocol Specification for the Operational Vehicle Program of the Inertial Reference Unit>, 
 Document Number YV2656, Rev. x
 08 October 2008
 

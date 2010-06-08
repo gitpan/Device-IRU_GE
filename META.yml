@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Device-IRU_GE
-version:            0.90
+version:            0.91
 abstract:           Perl Module to read and control a GE Aviation Systems IRU
 author:
     - root <root@localdomain>
