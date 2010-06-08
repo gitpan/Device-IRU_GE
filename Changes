@@ -1,0 +1,6 @@
+Revision history for Perl extension Device::IRU_GE.
+
+0.01  Fri Apr 23 11:37:58 2010
+	- original version; created by h2xs 1.23 with options
+		-AXc -n Device::IRU_GE
+
