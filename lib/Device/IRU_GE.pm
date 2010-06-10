@@ -2,7 +2,7 @@ package Device::IRU_GE;
 
 use 5.008008;
 #use strict;
-use warnings;
+#use warnings;
 
 #-#use Win32::SerialPort qw(:STAT 0.19 );
 use Device::SerialPort qw( :PARAM :STAT 0.07 );
@@ -14,7 +14,7 @@ use Math::Trig qw(asin rad2deg pi);
 require Exporter;
 our @ISA = qw(Exporter);
 
-our $VERSION = '0.91';
+our $VERSION = '0.92';
 
 our @EXPORT_OK = qw();
 our @EXPORT = qw();
@@ -521,7 +521,7 @@ sub clear_buf
   return;
 }
 
-sub close_port
+sub close
 {
    $self = shift @_;
 
